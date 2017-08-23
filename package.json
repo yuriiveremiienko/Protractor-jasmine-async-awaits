@@ -1,0 +1,37 @@
+{
+  "name": "Protractor-jasmine-async-awaits",
+  "version": "0.0.1",
+  "author": "Yurii Veremiienko",
+  "engines": {
+    "node": "8.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yuriiveremiienko/Protractor-jasmine-async-awaits"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "dependencies": {
+    "jasmine": "^2.4.1",
+    "jasmine-allure-reporter": "^1.0.1",
+    "moment": "^2.18.1",
+    "protractor": "^5.1.2",
+    "rmdir": "^1.2.0"
+  },
+  "devDependencies": {
+    "babel-register": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1"
+  },
+  "scripts": {
+    "test": "npm run pre-test && npm run e2e && npm run allure",
+    "pre-test": "node ./node_modules/protractor/bin/webdriver-manager update",
+    "e2e": "node ./node_modules/protractor/built/cli.js ./configs/config.js || true",
+    "allure": "npm run allure-clear && npm run allure-generate && npm run allure-open",
+    "allure-clear": "rm -rf ./allure-report",
+    "allure-generate": "allure generate ./allure-results -o ./allure-report",
+    "allure-open": "allure report open"
+  }
+}
