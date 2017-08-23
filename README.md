@@ -3,7 +3,7 @@
 * Git
 ## Installation
 ```cmd
-git clone git@github.com:yuriiveremiienko/Protractor-jasmine-async-awaits.git```____```
+git clone git@github.com:yuriiveremiienko/Protractor-jasmine-async-awaits.git
 npm i
 npm i allure-commandline -g
 ```
