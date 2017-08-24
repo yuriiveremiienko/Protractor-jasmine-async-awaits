@@ -7,9 +7,12 @@ git clone git@github.com:yuriiveremiienko/Protractor-jasmine-async-awaits.git```
 npm i
 npm i allure-commandline -g
 ```
-## Running tests
+## Running tests on Mac
 ```cmd
 npm test
-
-wait for report...
 ```
+## Running tests on PC
+```cmd
+npm run test-win
+```
+## Wait for report to be displayed after execution
